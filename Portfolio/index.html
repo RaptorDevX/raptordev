@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- SEO and social metadata -->
+  <title>Raptor Dev | AI/ML Engineer & Systems Developer</title>
+  <meta name="description" content="Raptor is an 18-year-old AI/ML engineer and technical manager from Delhi, India building scalable web infrastructure, game engine plugins, and autonomous applications.">
+  <meta name="keywords" content="RaptorDevX, Raptor Dev, AI ML engineer, Minecraft plugin developer, systems engineer, Delhi developer, plugin infrastructure">
+  <meta name="author" content="Raptor">
+  <link rel="canonical" href="https://github.com/RaptorDevX">
+  <meta property="og:title" content="Raptor Dev | Next-gen Code Architectures">
+  <meta property="og:description" content="Premium developer portfolio for Raptor: AI/ML engineering, plugin infrastructure, and scalable technical systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/RaptorDevX">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23fafafa'/%3E%3Ccircle cx='600' cy='315' r='180' fill='none' stroke='%232563eb' stroke-opacity='.18' stroke-width='2'/%3E%3Cpath d='M600 176l122 278H478L600 176z' fill='none' stroke='%23111111' stroke-width='12' stroke-linejoin='round'/%3E%3Ctext x='600' y='530' text-anchor='middle' font-family='Inter,Arial' font-size='56' fill='%23111111'%3ERaptor Dev%3C/text%3E%3C/svg%3E">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23fff'/%3E%3Cpath d='M32 10l18 43H38l-6-15-6 15H14L32 10z' fill='none' stroke='%23111111' stroke-width='5' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='33' r='4' fill='%234285f4'/%3E%3C/svg%3E">
+
+  <!-- Fonts and runtime libraries. The static site remains deployment-ready without a build step. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Tailwind runtime theme tokens for the Antigravity visual language. */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#101114',
+            muted: '#6f737b',
+            cloud: '#f8f8f8',
+            glass: 'rgba(255,255,255,.68)',
+            google: {
+              blue: '#4285f4',
+              red: '#ea4335',
+              yellow: '#fbbc04',
+              green: '#34a853'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'Google Sans', 'Product Sans', 'ui-sans-serif', 'system-ui'],
+            mono: ['JetBrains Mono', 'SFMono-Regular', 'Menlo', 'monospace']
+          },
+          boxShadow: {
+            glass: '0 24px 80px rgba(16, 17, 20, .08)',
+            lift: '0 34px 90px rgba(16, 17, 20, .12)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Raptor",
+    "alternateName": "RaptorDevX",
+    "email": "mailto:codewithanant3@gmail.com",
+    "address": {"@type": "PostalAddress", "addressLocality": "Delhi", "addressCountry": "IN"},
+    "sameAs": ["https://github.com/RaptorDevX"],
+    "jobTitle": "AI/ML Engineer and Systems Developer",
+    "knowsAbout": ["AI/ML", "Java", "Plugin Architecture", "Web Infrastructure", "Minecraft Plugin Development"]
+  }
+  </script>
+</head>
+
+<body class="bg-white font-sans text-ink antialiased selection:bg-black selection:text-white">
+  <!--
+    Folder structure:
+    /index.html  - semantic content, SVG logos, SEO, and section composition
+    /style.css   - design tokens, glassmorphism, responsive polish, reduced-motion fallbacks
+    /app.js      - loader, canvas physics, GSAP reveals, counters, magnetic buttons, clipboard
+  -->
+
+  <!-- Premium startup loader -->
+  <div id="loader" class="loader-shell" role="status" aria-live="polite" aria-label="Raptor initializing">
+    <div class="loader-panel">
+      <div class="loader-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><path d="M32 8 52 56H39l-7-17-7 17H12L32 8Z"/><circle cx="32" cy="33" r="4"/></svg>
+      </div>
+      <p>Raptor Initializing...</p>
+      <span id="loaderPercent">0%</span>
+      <div class="loader-track"><i id="loaderBar"></i></div>
+    </div>
+  </div>
+
+  <!-- Antigravity canvas and cursor depth system -->
+  <canvas id="antigravityCanvas" class="antigravity-canvas" aria-hidden="true"></canvas>
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Sticky Google-style navigation -->
+  <header id="siteHeader" class="fixed left-0 right-0 top-0 z-50">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Primary navigation">
+      <a href="#hero" class="brand-lockup magnetic" aria-label="Raptor Dev home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M11 37 24 7l13 30h-8l-5-12-5 12h-8Z"/><path d="M15 37h18"/><circle cx="24" cy="25" r="3.5"/></svg>
+        </span>
+        <span>Raptor Dev</span>
+      </a>
+
+      <button id="menuButton" class="mobile-menu-button md:hidden" type="button" aria-controls="primaryMenu" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+
+      <div id="primaryMenu" class="primary-menu">
+        <a href="#architecture">Core Architecture</a>
+        <a href="#systems">Systems</a>
+        <a href="#network">Network Infrastructure</a>
+        <a href="#contact">Contact Me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <!-- SECTION 1 - HERO / ANTIGRAVITY LANDING -->
+    <section id="hero" class="section-shell hero-section min-h-screen overflow-hidden pt-32 md:pt-40">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 pb-24 lg:grid-cols-[1.12fr_.88fr] lg:px-8">
+        <div class="relative z-10">
+          <div class="reveal inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-muted shadow-sm backdrop-blur-xl">
+            <span class="status-dot"></span>
+            <span>AI/ML Engineering · Plugin Infrastructure · Delhi, India</span>
+          </div>
+
+          <h1 class="reveal mt-8 max-w-5xl text-[clamp(3.6rem,10vw,8.8rem)] font-black leading-[.88] tracking-normal">
+            Experience liftoff with next-gen code architectures.
+          </h1>
+
+          <p class="reveal mt-8 max-w-3xl text-lg leading-8 text-muted md:text-xl">
+            I am Raptor, an 18-year-old AI/ML engineer and technical manager from Delhi, India. Building scalable web infrastructure, custom game engine plugins, and intelligent autonomous applications.
+          </p>
+
+          <div class="reveal mt-10 flex flex-col gap-3 sm:flex-row">
+            <a class="button button-dark magnetic" href="https://github.com/RaptorDevX" target="_blank" rel="noopener noreferrer" aria-label="View RaptorDevX on GitHub">
+              <span>View GitHub</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <div class="discord-wrap">
+              <button id="discordButton" class="button button-glass magnetic" type="button" aria-describedby="discordProfile" aria-expanded="false" aria-haspopup="dialog">
+                <span>Connect on Discord</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12h8M12 8v8"/></svg>
+              </button>
+              <aside id="discordProfile" class="discord-popover" role="dialog" aria-label="Discord profile" aria-hidden="true">
+                <div class="avatar">R</div>
+                <div>
+                  <strong>Raptor_ji</strong>
+                  <span>ID: 1072733945667538985</span>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <div class="reveal mt-10 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
+            <div class="metric-chip"><strong>25+</strong><span>systems shipped</span></div>
+            <div class="metric-chip"><strong data-count="4.6">4.6</strong><span>execution score / 5.0</span></div>
+            <div class="metric-chip"><strong>AI/ML</strong><span>engineering</span></div>
+          </div>
+        </div>
+
+        <div class="reveal relative z-10">
+          <div class="orbital-stage glass-panel">
+            <div class="stage-grid" aria-hidden="true"></div>
+            <div class="floating-badge badge-a">Realtime economy layer</div>
+            <div class="floating-badge badge-b">99.9% reliability focus</div>
+            <div class="floating-badge badge-c">Event architecture</div>
+            <svg class="architecture-orbit" viewBox="0 0 520 520" aria-label="Abstract antigravity system architecture">
+              <defs>
+                <linearGradient id="orbitGradient" x1="0" x2="1">
+                  <stop offset="0" stop-color="#4285f4"/>
+                  <stop offset=".35" stop-color="#34a853"/>
+                  <stop offset=".7" stop-color="#fbbc04"/>
+                  <stop offset="1" stop-color="#ea4335"/>
+                </linearGradient>
+              </defs>
+              <circle cx="260" cy="260" r="194" fill="none" stroke="url(#orbitGradient)" stroke-opacity=".18"/>
+              <circle cx="260" cy="260" r="126" fill="none" stroke="#111" stroke-opacity=".08"/>
+              <path d="M260 92 405 428H318l-58-136-58 136h-87L260 92Z" fill="none" stroke="#111" stroke-width="10" stroke-linejoin="round"/>
+              <circle class="orbit-node node-blue" cx="260" cy="260" r="18"/>
+              <circle class="orbit-node node-red" cx="105" cy="214" r="7"/>
+              <circle class="orbit-node node-yellow" cx="390" cy="154" r="7"/>
+              <circle class="orbit-node node-green" cx="423" cy="366" r="7"/>
+              <path d="M105 214h155l130-60M260 260l163 106M260 260l-55 111" stroke="#111" stroke-opacity=".12"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 - PRODUCT SHOWCASE -->
+    <section id="architecture" class="section-shell py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-kicker reveal">Core Architecture</div>
+        <div class="grid gap-8 lg:grid-cols-[1.08fr_.92fr]">
+          <article class="showcase-panel glass-panel reveal">
+            <div class="panel-heading">
+              <svg class="mini-logo" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="10" width="32" height="26" rx="6"/><path d="M15 20h18M15 27h10"/></svg>
+              <div>
+                <p>Plugin Infrastructure 2.0</p>
+                <h2>Live IDE pipeline for serious systems.</h2>
+              </div>
+            </div>
+            <div class="ide-window" aria-label="Plugin configuration IDE mockup">
+              <div class="window-controls"><i></i><i></i><i></i><span>raptor.infrastructure.yml</span></div>
+              <div class="ide-body">
+                <pre><code id="typingCode"></code><span class="caret"></span></pre>
+                <div class="terminal">
+                  <div class="terminal-line"><span>$</span> deploy trim-masterx --network BharatMC</div>
+                  <div class="terminal-line success">✓ hooks registered · economy synced · events warm</div>
+                  <div class="terminal-line"><span>$</span> deploy coinflip-master --safe-ledger</div>
+                  <div class="terminal-line success">✓ transaction guard online · rollback ready</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <aside id="network" class="reveal">
+            <div class="network-copy">
+              <span>Built for massive player scale</span>
+              <h2>Operational experience across high-pressure server networks.</h2>
+            </div>
+            <div class="bento-grid">
+              <div class="bento-card large">
+                <span>BharatMC</span>
+                <strong>Head Staff</strong>
+                <p>Operational leadership, live issue triage, player-scale systems coordination.</p>
+                <i data-count="99.9">0</i><em>% uptime focus</em>
+              </div>
+              <div class="bento-card">
+                <span>IndiaMC</span>
+                <strong>Core Developer</strong>
+                <p>Backend plugin delivery, config architecture, and event lifecycle reliability.</p>
+                <i data-count="43">0</i><em>deployments</em>
+              </div>
+              <div class="bento-card">
+                <span>FireMC</span>
+                <strong>Technical Helper</strong>
+                <p>Performance support, systems diagnosis, and hands-on production assistance.</p>
+                <i data-count="18">0</i><em>modules tuned</em>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 - PLUGIN VAULT -->
+    <section id="systems" class="section-shell py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-title reveal">
+          <span>Plugin Vault</span>
+          <h2>Production-grade systems with clean architecture signatures.</h2>
+        </div>
+        <div class="vault-grid">
+          <article class="vault-card reveal">
+            <svg class="vault-logo" viewBox="0 0 48 48"><path d="M12 17 24 10l12 7v14L24 38l-12-7V17Z"/><path d="M24 10v28M12 17l12 7 12-7"/></svg>
+            <h3>Clan Plugin</h3><p>Permission-aware clan lifecycle, invite flows, ranks, and shared progression state.</p><span class="status">Online</span><em>Distributed</em>
+          </article>
+          <article class="vault-card reveal">
+            <svg class="vault-logo" viewBox="0 0 48 48"><path d="M24 7 39 18 33 39H15L9 18 24 7Z"/><path d="M9 18h30M18 18l6 21 6-21"/></svg>
+            <h3>Gem Plugin</h3><p>Economy-grade gem transactions with fast balance reads and secure write paths.</p><span class="status">Stable</span><em>Secure</em>
+          </article>
+          <article class="vault-card reveal">
+            <svg class="vault-logo" viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"/><path d="M24 14v20M14 24h20"/></svg>
+            <h3>Bounty Plugin</h3><p>Realtime target markets, reward settlement, and event-triggered notifications.</p><span class="status">Online</span><em>Realtime</em>
+          </article>
+          <article class="vault-card reveal">
+            <svg class="vault-logo" viewBox="0 0 48 48"><path d="M10 12h28v7H10zM16 19h16v17H16z"/><path d="M21 25h6M21 31h6"/></svg>
+            <h3>Trim MasterX</h3><p>Configurable trim catalog, unlock rules, cosmetic state, and inventory-safe execution.</p><span class="status">Live</span><em>High-performance</em>
+          </article>
+          <article class="vault-card reveal">
+            <svg class="vault-logo" viewBox="0 0 48 48"><circle cx="19" cy="24" r="10"/><circle cx="29" cy="24" r="10"/><path d="M17 20h4v8h-4M27 20h4v8h-4"/></svg>
+            <h3>Coinflip Master</h3><p>Ledger-protected wagers, rollback-aware outcomes, and trust-first game economy logic.</p><span class="status">Stable</span><em>Secure</em>
+          </article>
+          <article class="vault-card reveal">
+            <svg class="vault-logo" viewBox="0 0 48 48"><path d="M12 14h24M12 24h24M12 34h24"/><circle cx="17" cy="14" r="3"/><circle cx="31" cy="24" r="3"/><circle cx="22" cy="34" r="3"/></svg>
+            <h3>20+ Additional Systems</h3><p>Gameplay modules, admin utilities, data handlers, and custom network automation.</p><span class="status">Shipped</span><em>Plugin Architecture</em>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 - PERFORMANCE ANALYTICS -->
+    <section class="section-shell py-24 md:py-32">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[.9fr_1.1fr] lg:px-8">
+        <div class="analytics-rating glass-panel reveal">
+          <span>Performance Analytics</span>
+          <h2>4.6 / 5.0 System Execution Rating</h2>
+          <div class="radial-wrap" aria-label="System execution radial graph">
+            <svg viewBox="0 0 220 220">
+              <circle cx="110" cy="110" r="88" class="track"/>
+              <circle cx="110" cy="110" r="88" class="progress" data-progress="92"/>
+            </svg>
+            <strong data-count="4.6">0</strong>
+          </div>
+        </div>
+        <div class="analytics-grid">
+          <div class="analytics-card reveal"><strong data-count="25">0</strong><span>Plugins</span></div>
+          <div class="analytics-card reveal"><strong data-count="3">0</strong><span>Major Networks</span></div>
+          <div class="analytics-card reveal"><strong data-count="99.9">0</strong><span>% Reliability Focus</span></div>
+          <div class="analytics-card reveal"><strong>AI/ML</strong><span>Engineering</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 - TESTIMONIAL MARQUEE -->
+    <section class="section-shell marquee-section py-24 md:py-28" aria-label="Testimonials">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-title reveal">
+          <span>Signal</span>
+          <h2>Trusted by operators, creators, and network teams.</h2>
+        </div>
+      </div>
+      <div class="marquee-tilt">
+        <div class="marquee-track">
+          <article><i>D</i><strong>Donvision</strong><p>“Raptor ships with calm execution and a real systems mindset.”</p></article>
+          <article><i>F</i><strong>Fleeky</strong><p>“Clean configs, quick fixes, and plugin logic that holds up live.”</p></article>
+          <article><i>R</i><strong>Roiz Plays</strong><p>“The infrastructure work feels professional from the first deploy.”</p></article>
+          <article><i>A</i><strong>Aditya</strong><p>“Reliable, sharp, and very fast at turning ideas into usable systems.”</p></article>
+          <article><i>AM</i><strong>Aman</strong><p>“Strong technical ownership with polished delivery under pressure.”</p></article>
+          <article><i>D</i><strong>Donvision</strong><p>“Raptor ships with calm execution and a real systems mindset.”</p></article>
+          <article><i>F</i><strong>Fleeky</strong><p>“Clean configs, quick fixes, and plugin logic that holds up live.”</p></article>
+          <article><i>R</i><strong>Roiz Plays</strong><p>“The infrastructure work feels professional from the first deploy.”</p></article>
+          <article><i>A</i><strong>Aditya</strong><p>“Reliable, sharp, and very fast at turning ideas into usable systems.”</p></article>
+          <article><i>AM</i><strong>Aman</strong><p>“Strong technical ownership with polished delivery under pressure.”</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 - SKILLS & STACK -->
+    <section class="section-shell py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="skills-shell glass-panel reveal">
+          <div class="section-title">
+            <span>Skills & Stack</span>
+            <h2>Technical stack arranged for practical production work.</h2>
+          </div>
+          <div class="skill-groups">
+            <div><h3>Frontend</h3><p><span>HTML</span><span>CSS</span><span>Tailwind</span><span>JS</span></p></div>
+            <div><h3>Backend</h3><p><span>Java</span><span>SQL</span><span>APIs</span><span>Plugin Architecture</span></p></div>
+            <div><h3>AI/ML</h3><p><span>Python</span><span>Data Systems</span><span>AI Concepts</span></p></div>
+            <div><h3>Game Systems</h3><p><span>Minecraft Plugin Development</span><span>Performance Engineering</span><span>Economy Systems</span><span>Event Architectures</span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 - CONTACT / LIFTOFF -->
+    <section id="contact" class="section-shell contact-section py-24 md:py-32">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <h2 class="reveal text-[clamp(4rem,14vw,13rem)] font-black leading-none tracking-normal">Antigravity Dev</h2>
+        <button id="emailCopy" class="email-copy magnetic reveal" type="button" data-email="codewithanant3@gmail.com" aria-live="polite">
+          <span class="email-label">codewithanant3@gmail.com</span>
+          <span class="email-success">System Copied to Clipboard!</span>
+        </button>
+        <footer class="footer-links reveal">
+          <a href="raptor-spec-sheet.txt" download>Download Spec Sheet</a>
+          <a href="#systems">Products</a>
+          <a href="https://github.com/RaptorDevX" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="footer-metric"><strong data-count="4.6">0</strong>/5.0 execution</span>
+          <button id="footerDiscord" type="button">Discord</button>
+          <a href="#contact">Privacy</a>
+          <a href="#contact">Terms</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

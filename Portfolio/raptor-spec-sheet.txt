@@ -1,0 +1,34 @@
+Raptor Antigravity - Developer Spec Sheet
+
+Identity
+- Name: Raptor
+- GitHub: https://github.com/RaptorDevX
+- Discord: Raptor_ji / 1072733945667538985
+- Email: codewithanant3@gmail.com
+- Location: Delhi, India
+
+Core Focus
+- AI/ML engineering
+- Scalable web infrastructure
+- Java plugin architecture
+- Minecraft server systems
+- Economy and event-driven game systems
+
+Selected Systems
+- Clan Plugin
+- Gem Plugin
+- Bounty Plugin
+- Trim MasterX
+- Coinflip Master
+- 20+ additional production systems
+
+Network Experience
+- BharatMC: Head Staff
+- IndiaMC: Core Developer
+- FireMC: Technical Helper
+
+Execution Signals
+- 25+ systems shipped
+- 3 major networks
+- 4.3 / 5.0 execution score
+- 99.9% reliability focus
