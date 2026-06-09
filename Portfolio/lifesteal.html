@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifesteal Plugin | Raptor Dev</title>
+  <meta name="description" content="Dynamic PvP survival mechanics with heart theft, health limits, custom recipes, and secure transaction ledgers.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#101114',
+            muted: '#6f737b',
+            cloud: '#f8f8f8',
+            glass: 'rgba(255,255,255,.68)',
+            google: {
+              blue: '#4285f4',
+              red: '#ea4335',
+              yellow: '#fbbc04',
+              green: '#34a853'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white font-sans text-ink antialiased selection:bg-black selection:text-white">
+
+  <!-- Floating Sticky Navbar -->
+  <header id="siteHeader" class="fixed left-0 right-0 top-0 z-50 bg-white/70 border-b border-black/5 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Secondary navigation">
+      <a href="index.html" class="brand-lockup" aria-label="Raptor Dev home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M11 37 24 7l13 30h-8l-5-12-5 12h-8Z"/><path d="M15 37h18"/><circle cx="24" cy="25" r="3.5"/></svg>
+        </span>
+        <span class="font-bold">Raptor Dev // Plugins</span>
+      </a>
+      <a href="index.html#systems" class="button button-glass py-2 px-4 min-h-0 text-xs flex items-center space-x-2">
+        <i class="fa-solid fa-arrow-left text-[10px]"></i>
+        <span>Back to Portfolio</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="pt-28 pb-24">
+    <!-- HERO SECTION -->
+    <section class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-[1.1fr_.9fr] items-center">
+        <!-- Hero Text Details -->
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-cloud px-3 py-1.5 text-xs font-semibold text-muted">
+            <span class="status-dot" style="background-color: #ea4335; box-shadow: 0 0 0 6px rgba(234, 67, 53, .1);"></span>
+            <span>PvP Mechanics · Custom recipes · Spigot API</span>
+          </div>
+          
+          <h1 class="mt-6 text-5xl lg:text-6xl font-black tracking-tight leading-[1.05]">
+            Lifesteal Plugin
+          </h1>
+          <p class="mt-6 text-lg text-muted font-light leading-relaxed">
+            Dramatically alter survival gamemodes with event-driven heart theft upon PvP kills. Design custom crafting recipes, maximum health locks, secure withdrawal systems, and automated spectator revives.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3 font-tech text-xs">
+            <a href="index.html#contact" class="button button-dark px-6">
+              <span>Hire Raptor for Custom Systems</span>
+              <i class="fa-solid fa-code text-[10px] ml-1"></i>
+            </a>
+            <a href="https://github.com/RaptorDevX" target="_blank" rel="noopener noreferrer" class="button button-glass px-6">
+              <span>View GitHub Docs</span>
+              <i class="fa-brands fa-github text-[11px] ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Feature Quick Chips -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+            <div class="p-3 border border-black/5 bg-cloud/50 rounded-xl">
+              <span class="text-zinc-400 block font-tech">MAX HEALTH</span>
+              <strong class="text-sm">40 HEARTS</strong>
+            </div>
+            <div class="p-3 border border-black/5 bg-cloud/50 rounded-xl">
+              <span class="text-zinc-400 block font-tech">THEFT STATE</span>
+              <strong class="text-sm">99.9% RELIABLE</strong>
+            </div>
+            <div class="p-3 border border-black/5 bg-cloud/50 rounded-xl">
+              <span class="text-zinc-400 block font-tech">WITHDRAWAL</span>
+              <strong class="text-sm">GUI SUPPORTED</strong>
+            </div>
+            <div class="p-3 border border-black/5 bg-cloud/50 rounded-xl">
+              <span class="text-zinc-400 block font-tech">SUPPORTED</span>
+              <strong class="text-sm">PAPER 1.16+</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Framed AI-Generated Showcase Image -->
+        <div class="relative overflow-hidden rounded-[2rem] border border-black/5 shadow-lift bg-cloud group aspect-square">
+          <img src="./lifesteal_plugin_showcase_1779960238677.png" alt="Minecraft PvP Lifesteal Hearts Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW & DETAILS -->
+    <section class="mt-32 border-t border-black/5 pt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-3">
+        <div>
+          <span class="text-xs font-semibold text-google-blue uppercase tracking-widest block font-tech">// OPERATIONS OVERVIEW</span>
+          <h2 class="text-3xl font-black mt-2 leading-tight">Key Architectural Foundations</h2>
+        </div>
+        <div class="lg:col-span-2 space-y-6 text-muted font-light leading-relaxed text-sm">
+          <p>
+            The **Lifesteal Plugin** brings intense hardcore survival mechanics to Minecraft. The core feature triggers a secure heart theft upon PvP kills: the victim loses a heart container while the killer claims it.
+          </p>
+          <p>
+            To prevent server exploitation, the plugin integrates safe health limits, custom crafting rules to synthesize hearts from rare resources, and item-based heart withdrawal ledgers. It is fully optimized for minimal CPU ticks, supporting major PvP networks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUAL FEATURES SHOWCASE (ALL 8 FEATURES) -->
+    <section class="mt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold text-google-green uppercase tracking-widest block font-tech">// COMPONENT FLOWS</span>
+        <h2 class="text-3xl lg:text-4xl font-black mt-2">Elite Plugin Features</h2>
+        <p class="text-muted text-sm max-w-2xl mx-auto mt-4 font-light">Explore the complete structural features packaged inside this plugin, designed for professional player experiences.</p>
+      </div>
+
+      <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <!-- 1. Heart Theft Event -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-red/10 flex items-center justify-center text-google-red text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-heart-crack"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">1. Heart Theft Events</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Asynchronous listeners intercept player deaths to safely transfer HP containers between participants instantly.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-4 rounded-2xl font-mono text-[9px] text-muted space-y-1">
+            <div class="text-google-red font-bold">☠ PvP Death Event</div>
+            <div class="flex justify-between border-t border-black/5 pt-1"><span>Killer Raptor</span><span class="text-google-green">+1 Heart</span></div>
+            <div class="flex justify-between"><span>Victim Steve</span><span class="text-google-red">-1 Heart</span></div>
+          </div>
+        </div>
+
+        <!-- 2. Custom Crafting -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-green/10 flex items-center justify-center text-google-green text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-hammer"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">2. Heart Crafting Recipes</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Define customized recipes in the server upgrades files, requiring netherite or diamonds to synthesize hearts.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>Recipe: 4x Netherite + 4x Diamond</span>
+            <span class="font-bold text-google-green">ACTIVE</span>
+          </div>
+        </div>
+
+        <!-- 3. Spectator Revive -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-yellow/10 flex items-center justify-center text-google-yellow text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-ghost"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">3. Spectator Revives</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Eliminated players entering spectator mode are securely revived once teammates consume specialized heart items.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-xs">
+            <span class="text-[10px] font-tech font-bold text-muted uppercase">Spectator status</span>
+            <span class="text-google-yellow font-bold uppercase">REVIVABLE</span>
+          </div>
+        </div>
+
+        <!-- 4. Withdraw HP GUI -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-blue/10 flex items-center justify-center text-google-blue text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-circle-minus"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">4. Heart Withdrawals</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Support clean graphical withdrawal parameters, letting players convert active HP bars into tradeable inventory items.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl font-mono text-[9px] text-muted flex justify-between items-center">
+            <span>Withdraw GUI:</span>
+            <span class="px-2 py-0.5 bg-blue-100 text-google-blue rounded font-bold uppercase">SUPPORTED</span>
+          </div>
+        </div>
+
+        <!-- 5. Health Container Limits -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-blue/10 flex items-center justify-center text-google-blue text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">5. Health Caps & Limits</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Prevent invincibility loops by declaring strict maximum health locks (for example, capped at 40 HP / 20 hearts).</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>Maximum HP Lock:</span>
+            <span class="font-bold text-google-blue">40 Hearts</span>
+          </div>
+        </div>
+
+        <!-- 6. Revive Beacons -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-yellow/10 flex items-center justify-center text-google-yellow text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">6. Revive Beacon Blocks</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Interactive beacon placement checks safely restore teammate records in database pools when placed down.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>Beacon Placement:</span>
+            <span class="font-bold text-google-yellow">TELEMETRY ON</span>
+          </div>
+        </div>
+
+        <!-- 7. Anti-Dupe Safeguards -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-red/10 flex items-center justify-center text-google-red text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">7. Transaction Rollbacks</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Guaranteed state checking pipelines eliminate item duplication exploits during high-pressure PvP wagers.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>Rollback Protection:</span>
+            <span class="font-bold text-google-green uppercase">ENABLED</span>
+          </div>
+        </div>
+
+        <!-- 8. Event Tracking Logs -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-green/10 flex items-center justify-center text-google-green text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">8. Asynchronous Event Logs</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Fully cached thread handlers bypass main loop ticks, guaranteeing zero TPS loss during intensive combat events.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>Main Thread Cycles:</span>
+            <span class="font-bold text-google-green">0.02ms</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM SCREENSHOTS GALLERY / SLIDER -->
+    <section class="mt-32 border-t border-black/5 pt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold text-google-blue uppercase tracking-widest block font-tech">// SYSTEMS GALLERY</span>
+        <h2 class="text-3xl lg:text-4xl font-black mt-2">Visual Showcase Gallery</h2>
+        <p class="text-muted text-sm max-w-2xl mx-auto mt-4 font-light">Browse professional, high-fidelity AI-generated mockups and in-game interface simulation layouts.</p>
+      </div>
+
+      <!-- Slideshow Slider Container -->
+      <div class="relative max-w-4xl mx-auto overflow-hidden rounded-[2rem] border border-black/5 shadow-lift bg-cloud group">
+        <div class="slides-container flex transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" style="transform: translateX(0%);">
+          
+          <!-- Slide 1: Main Banner -->
+          <div class="w-full shrink-0 aspect-[16/9] relative">
+            <img src="./lifesteal_plugin_showcase_1779960238677.png" alt="Minecraft Lifesteal Hearts PvP" class="w-full h-full object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-8 text-white flex flex-col justify-end">
+              <span class="text-xs font-tech tracking-wider text-google-red uppercase mb-1">CINEMATIC PREVIEW</span>
+              <h3 class="text-lg font-bold">Intense PvP HP Theft</h3>
+              <p class="text-xs text-zinc-300 mt-1 font-light">Simulate real-time combat conditions and team-based objectives across high-scale network arenas.</p>
+            </div>
+          </div>
+          
+          <!-- Slide 2: Heart Altar Mockup -->
+          <div class="w-full shrink-0 aspect-[16/9] relative">
+            <img src="./lifesteal_heart_altar.png" alt="Minecraft glowing Lifesteal Heart Altar" class="w-full h-full object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-8 text-white flex flex-col justify-end">
+              <span class="text-xs font-tech tracking-wider text-google-blue uppercase mb-1">MOCK INTERFACE ILLUSTRATION</span>
+              <h3 class="text-lg font-bold">Consumable Heart Containers</h3>
+              <p class="text-xs text-zinc-300 mt-1 font-light">Consumable hearts synthesized from rare materials permanently add container slots to HP bars.</p>
+            </div>
+          </div>
+          
+          <!-- Slide 3: Mock double chest GUI -->
+          <div class="w-full shrink-0 aspect-[16/9] bg-zinc-900 flex items-center justify-center p-8 relative">
+            <!-- Simulated In-game Screen -->
+            <div class="w-full max-w-[400px] transform scale-90 sm:scale-100">
+              <div class="minecraft-gui w-full">
+                <div class="mc-header border-b-2 border-[#555555]">
+                  <i class="fa-solid fa-heart-circle-bolt mr-1.5 text-xs text-[#373737]"></i>Mock HP Bank
+                </div>
+                <div class="mc-grid">
+                  <div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+                  <div class="mc-slot empty"></div>
+                  <div class="mc-slot"><i class="fa-solid fa-heart text-google-red text-xs"></i></div>
+                  <div class="mc-slot empty"></div>
+                  <div class="mc-slot"><i class="fa-solid fa-sun text-google-yellow text-xs"></i></div>
+                  <div class="mc-slot empty"></div>
+                  <div class="mc-slot"><i class="fa-solid fa-circle-minus text-google-blue text-xs"></i></div>
+                  <div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-8 text-white flex flex-col justify-end">
+              <span class="text-xs font-tech tracking-wider text-google-yellow uppercase mb-1">IN-GAME SIMULATION</span>
+              <h3 class="text-lg font-bold">Interactive Dynamic Chest Storage Banks</h3>
+              <p class="text-xs text-zinc-300 mt-1 font-light">Custom interfaces dynamically responsive to user inputs, completely asset-free.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Navigation Arrows -->
+        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 border border-black/5 flex items-center justify-center text-ink shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110">
+          <i class="fa-solid fa-chevron-left text-xs"></i>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 border border-black/5 flex items-center justify-center text-ink shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110">
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+
+        <!-- Slider Dots -->
+        <div class="absolute right-8 top-8 flex gap-2">
+          <button onclick="goToSlide(0)" class="slide-dot w-2 h-2 rounded-full bg-white/40 active-dot"></button>
+          <button onclick="goToSlide(1)" class="slide-dot w-2 h-2 rounded-full bg-white/40"></button>
+          <button onclick="goToSlide(2)" class="slide-dot w-2 h-2 rounded-full bg-white/40"></button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INTERACTIVE LIVE PREVIEW AREA -->
+    <section id="sandbox" class="mt-32 border-t border-black/5 pt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold text-google-blue uppercase tracking-widest block font-tech">// EXPERIMENTAL LIVE SANDBOX</span>
+        <h2 class="text-3xl lg:text-4xl font-black mt-2">Interactive Plugin Preview</h2>
+      </div>
+
+      <div class="grid gap-12 lg:grid-cols-12 items-start">
+        <!-- Interactive Chest GUI (Left) -->
+        <div class="lg:col-span-5 flex flex-col items-center w-full">
+          <span class="font-tech text-[10px] text-muted uppercase tracking-widest mb-3 block">Minecraft Chest GUI Simulator</span>
+          
+          <!-- Mock Minecraft Chest GUI Wrapper for Mobile Scaling -->
+          <div class="w-full overflow-x-auto flex justify-center py-2">
+            <div class="minecraft-gui w-full max-w-[340px] shrink-0">
+            <div class="mc-header border-b-2 border-[#555555]">
+              <i class="fa-solid fa-heart-circle-bolt mr-1.5 text-xs text-[#373737]"></i>Heart Storage Bank
+            </div>
+            
+            <div class="mc-grid">
+              <div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+              
+              <div class="mc-slot empty"></div>
+              <!-- Slot 11: Heart Item, Slot 12 Empty, Slot 13: Revive Item, Slot 14 Empty, Slot 15: Withdraw Heart -->
+              <div class="mc-slot">
+                <i class="fa-solid fa-heart text-google-red text-xs"></i>
+                <div class="mc-tooltip">
+                  <h4 class="text-red-400">Consumable Heart Container</h4>
+                  <p class="text-zinc-400">Adds 1 Heart (+2 Max HP) permanently.</p>
+                  <p class="text-[#fbbc04] mt-1 font-tech">Maximum Limit: 40 Hearts</p>
+                </div>
+              </div>
+              <div class="mc-slot empty"></div>
+              <div class="mc-slot">
+                <i class="fa-solid fa-sun text-google-yellow text-xs"></i>
+                <div class="mc-tooltip">
+                  <h4 class="text-yellow-400">Revive Beacon</h4>
+                  <p class="text-zinc-400">Revive an eliminated teammate.</p>
+                  <p class="text-zinc-500 mt-1 font-tech">/revive &lt;player&gt;</p>
+                </div>
+              </div>
+              <div class="mc-slot empty"></div>
+              <div class="mc-slot">
+                <i class="fa-solid fa-circle-minus text-google-blue text-xs"></i>
+                <div class="mc-tooltip">
+                  <h4 class="text-cyan-400">Withdraw Hearts</h4>
+                  <p class="text-zinc-400">Convert your active HP into items.</p>
+                  <p class="text-zinc-500 mt-1 font-tech">/withdraw &lt;amount&gt;</p>
+                </div>
+              </div>
+              <div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+              
+              <div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+            </div>
+          </div>
+        </div>
+
+          <p class="mt-4 text-[10px] text-zinc-500 font-tech uppercase tracking-widest">[HOVER ITEMS IN CHEST TO DEPLOY DETAILS]</p>
+        </div>
+
+        <!-- Dynamic Config Panel (Right) -->
+        <div class="lg:col-span-7 w-full">
+          <span class="font-tech text-[10px] text-muted uppercase tracking-widest mb-3 block text-left">Configuration File Inspector</span>
+          
+          <div class="config-panel">
+            <div class="config-tabs">
+              <div id="tab-config" class="config-tab active" onclick="switchConfigTab('config')">config.yml</div>
+              <div id="tab-database" class="config-tab" onclick="switchConfigTab('database')">hearts.yml</div>
+              <div id="tab-permissions" class="config-tab" onclick="switchConfigTab('permissions')">permissions.yml</div>
+            </div>
+            
+            <div class="p-6 text-left">
+              <pre class="overflow-x-auto text-[11px] font-mono leading-relaxed text-[#dfe7f4] min-h-[190px] max-h-[220px]" id="config-code">lifesteal:
+  default-hearts: 10
+  maximum-hearts: 40
+  heart-item-withdraw-limit: 10
+  ban-on-zero-hearts: true
+  ban-time-hours: 24
+  revive-enabled: true
+  
+crafting:
+  heart-recipe-enabled: true</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCUMENTATION SECTION -->
+    <section class="mt-32 border-t border-black/5 pt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <!-- Commands & Permissions -->
+        <div>
+          <span class="text-xs font-semibold text-google-blue uppercase tracking-widest block font-tech">// OPERATIONS GUIDE</span>
+          <h2 class="text-3xl font-black mt-2 leading-tight">Commands & Permissions</h2>
+          
+          <div class="mt-8 overflow-x-auto border border-black/5 rounded-2xl">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Command</th>
+                  <th>Permission</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>/withdraw &lt;amount&gt;</td>
+                  <td>lifesteal.withdraw</td>
+                  <td>Convert HP into physical heart items.</td>
+                </tr>
+                <tr>
+                  <td>/revive &lt;player&gt;</td>
+                  <td>lifesteal.revive</td>
+                  <td>Revive an eliminated player in spectator mode.</td>
+                </tr>
+                <tr>
+                  <td>/lifesteal set &lt;player&gt; &lt;amount&gt;</td>
+                  <td>lifesteal.admin</td>
+                  <td>Modify player's active hearts container.</td>
+                </tr>
+                <tr>
+                  <td>/lifesteal reload</td>
+                  <td>lifesteal.admin</td>
+                  <td>Reload lifesteal parameters configurations.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Installation & Support -->
+        <div class="flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-semibold text-google-green uppercase tracking-widest block font-tech">// INTEGRATION BLUEPRINTS</span>
+            <h2 class="text-3xl font-black mt-2 leading-tight">Installation Blueprint</h2>
+            
+            <div class="mt-8 space-y-4 text-xs font-tech text-muted leading-relaxed font-light">
+              <div class="flex items-start space-x-3 p-3 border border-black/5 bg-cloud/50 rounded-xl">
+                <span class="font-bold text-google-blue">01</span>
+                <p>Download the latest <code class="bg-black/5 px-1 py-0.5 rounded text-ink font-mono font-medium">Lifesteal.jar</code> from server repositories.</p>
+              </div>
+              <div class="flex items-start space-x-3 p-3 border border-black/5 bg-cloud/50 rounded-xl">
+                <span class="font-bold text-google-green">02</span>
+                <p>Place the jar into Spigot/Paper server <code class="bg-black/5 px-1 py-0.5 rounded text-ink font-mono font-medium">/plugins/</code> directory.</p>
+              </div>
+              <div class="flex items-start space-x-3 p-3 border border-black/5 bg-cloud/50 rounded-xl">
+                <span class="font-bold text-google-yellow">03</span>
+                <p>Reload Spigot to generate default configurations and set up in-game database trackers.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 p-6 bg-cloud/60 border border-black/5 rounded-[2rem] text-left">
+            <h4 class="font-bold text-sm mb-2">Systems Integration Support</h4>
+            <p class="text-xs text-muted leading-relaxed font-light">
+              Raptor provides complete direct technical support for BharatMC, IndiaMC, and large external networks. Connect via Discord for deployment helper tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-black/5 py-12 bg-cloud/30">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-muted gap-4">
+      <span>© 2026 RAPTOR. ALL ARCHITECTURE RIGHTS RESERVED.</span>
+      <div class="flex items-center space-x-4">
+        <a href="index.html" class="hover:text-ink">Portfolio Home</a>
+        <a href="index.html#contact" class="hover:text-ink">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const configData = {
+      config: `lifesteal:
+  default-hearts: 10
+  maximum-hearts: 40
+  heart-item-withdraw-limit: 10
+  ban-on-zero-hearts: true
+  ban-time-hours: 24
+  revive-enabled: true
+  
+crafting:
+  heart-recipe-enabled: true`,
+      database: `heart-item:
+  material: REDSTONE
+  name: "&c&lConsumable Heart Container"
+  lore:
+    - "&7Right-click to claim"
+    - "&7Adds +1 Heart permanent"`,
+      permissions: `permissions:
+  lifesteal.withdraw:
+    default: true
+    description: "Allows using /withdraw"
+  lifesteal.revive:
+    default: true
+    description: "Allows reviving spectators"
+  lifesteal.admin:
+    default: op
+    description: "Full master administrative capabilities"`
+    };
+
+    function switchConfigTab(tab) {
+      document.querySelectorAll('.config-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById(`tab-${tab}`).classList.add('active');
+      document.getElementById('config-code').textContent = configData[tab];
+    }
+
+    // Slideshow Gallery Logic
+    let currentSlide = 0;
+    const totalSlides = 3;
+
+    function updateSlides() {
+      const container = document.querySelector('.slides-container');
+      if (container) {
+        container.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+      
+      // Update dots
+      document.querySelectorAll('.slide-dot').forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add('bg-white', 'scale-115');
+          dot.classList.remove('bg-white/40');
+        } else {
+          dot.classList.remove('bg-white', 'scale-115');
+          dot.classList.add('bg-white/40');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlides();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlides();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlides();
+    }
+
+    // Initialize dots on load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateSlides();
+    });
+  </script>
+</body>
+</html>

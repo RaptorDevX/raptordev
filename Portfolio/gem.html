@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaptorGemPlugin | Raptor Dev</title>
+  <meta name="description" content="Premium-quality, high-performance fantasy survival gem and custom totem system designed for modern PaperMC and Folia servers.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#101114',
+            muted: '#6f737b',
+            cloud: '#f8f8f8',
+            glass: 'rgba(255,255,255,.68)',
+            google: {
+              blue: '#4285f4',
+              red: '#ea4335',
+              yellow: '#fbbc04',
+              green: '#34a853'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white font-sans text-ink antialiased selection:bg-black selection:text-white">
+
+  <!-- Floating Sticky Navbar -->
+  <header id="siteHeader" class="fixed left-0 right-0 top-0 z-50 bg-white/70 border-b border-black/5 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Secondary navigation">
+      <a href="index.html" class="brand-lockup" aria-label="Raptor Dev home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M11 37 24 7l13 30h-8l-5-12-5 12h-8Z"/><path d="M15 37h18"/><circle cx="24" cy="25" r="3.5"/></svg>
+        </span>
+        <span class="font-bold">Raptor Dev // Plugins</span>
+      </a>
+      <a href="index.html#systems" class="button button-glass py-2 px-4 min-h-0 text-xs flex items-center space-x-2">
+        <i class="fa-solid fa-arrow-left text-[10px]"></i>
+        <span>Back to Portfolio</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="pt-28 pb-24">
+    <!-- HERO SECTION -->
+    <section class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-[1.1fr_.9fr] items-center">
+        <!-- Hero Text Details -->
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-cloud px-3 py-1.5 text-xs font-semibold text-muted">
+            <span class="status-dot" style="background-color: #a855f7; box-shadow: 0 0 0 6px rgba(168, 85, 247, .15);"></span>
+            <span>PaperMC & Folia · MMORPG Mechanics · Java 21</span>
+          </div>
+          
+          <h1 class="mt-6 text-5xl lg:text-6xl font-black tracking-tight leading-[1.05]">
+            RaptorGemPlugin
+          </h1>
+          <p class="mt-6 text-lg text-muted font-light leading-relaxed">
+            A premium-quality, high-performance fantasy survival gem and custom totem system designed for modern multi-threaded Folia and PaperMC servers. Let players craft late-game gems to immediately unlock game-altering passive and ultimate active abilities.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3 font-tech text-xs">
+            <a href="index.html#contact" class="button button-dark px-6">
+              <span>Hire Raptor for Custom Systems</span>
+              <i class="fa-solid fa-code text-[10px] ml-1"></i>
+            </a>
+            <a href="https://github.com/RaptorDevX" target="_blank" rel="noopener noreferrer" class="button button-glass px-6">
+              <span>View GitHub Docs</span>
+              <i class="fa-brands fa-github text-[11px] ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Feature Quick Chips -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+            <div class="p-3 border border-black/5 bg-cloud/50 rounded-xl">
+              <span class="text-zinc-400 block font-tech">MODULAR GEMS</span>
+              <strong class="text-sm">12 TYPES</strong>
+            </div>
+            <div class="p-3 border border-black/5 bg-cloud/50 rounded-xl">
+              <span class="text-zinc-400 block font-tech">THREAD SAFETY</span>
+              <strong class="text-sm">FOLIA READY</strong>
+            </div>
+            <div class="p-3 border border-black/5 bg-cloud/50 rounded-xl">
+              <span class="text-zinc-400 block font-tech">UI SECURE</span>
+              <strong class="text-sm">100% GLITCH-FREE</strong>
+            </div>
+            <div class="p-3 border border-black/5 bg-cloud/50 rounded-xl">
+              <span class="text-zinc-400 block font-tech">COMPATIBILITY</span>
+              <strong class="text-sm">PAPER 1.20.6+</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Framed AI-Generated Showcase Image -->
+        <div class="relative overflow-hidden rounded-[2rem] border border-black/5 shadow-lift bg-cloud group aspect-square">
+          <img src="./lifesteal_heart_altar.png" alt="Minecraft Custom Gems Altar Showcase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW & DETAILS -->
+    <section class="mt-32 border-t border-black/5 pt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-3">
+        <div>
+          <span class="text-xs font-semibold text-google-blue uppercase tracking-widest block font-tech">// OPERATIONS OVERVIEW</span>
+          <h2 class="text-3xl font-black mt-2 leading-tight">Key Architectural Foundations</h2>
+        </div>
+        <div class="lg:col-span-2 space-y-6 text-muted font-light leading-relaxed text-sm">
+          <p>
+            The **RaptorGemPlugin** completely transforms standard survival worlds by introducing late-game fantasy elements. Players invest expensive resources (like Nether Stars, Echo Shards, and Shulker Shells) to synthesize modular gems. 
+          </p>
+          <p>
+            Designed specifically for multi-threaded region-based environments (Folia), the plugin completely avoids lag-inducing global player ticking, utilizing per-player distributed schedulers and coordinate-specific block modification locks instead.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUAL FEATURES SHOWCASE (ALL 8 CORE FEATURES) -->
+    <section class="mt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold text-google-green uppercase tracking-widest block font-tech">// COMPONENT FLOWS</span>
+        <h2 class="text-3xl lg:text-4xl font-black mt-2">Elite Plugin Features</h2>
+        <p class="text-muted text-sm max-w-2xl mx-auto mt-4 font-light">Explore the competitive elements, thread performance tuning, and MMORPG spells built into this custom package.</p>
+      </div>
+
+      <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <!-- 1. 12 Modular Spells -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-blue/10 flex items-center justify-center text-google-blue text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">1. 12 Modular Fantasy Spells</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Equip Gravity, Void, Shadow, Inferno, Celestial, or Chaos gems to trigger high-end passive and ultimate active abilities.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-4 rounded-2xl font-mono text-[9px] text-muted space-y-1">
+            <div class="flex justify-between text-ink font-bold"><span>Equipped Gem:</span><span class="text-google-blue">Gravity Gem</span></div>
+            <div class="flex justify-between"><span>Active Ability:</span><span class="text-ink">Gravity Crush</span></div>
+          </div>
+        </div>
+
+        <!-- 2. Classic Totempops -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-yellow/10 flex items-center justify-center text-google-yellow text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">2. Classic Guardian Totem</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Features an incremental, multi-pop resurrection totem system, safely decrementing pops on player deaths.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>Totem Remaining Pops:</span>
+            <span class="font-bold text-google-yellow font-tech">4 pops</span>
+          </div>
+        </div>
+
+        <!-- 3. Folia Multi-Threading -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-green/10 flex items-center justify-center text-google-green text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">3. 100% Folia Thread-Safety</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Fully compliant regional schedulers block thread lock exception loops when altering blocks across regional bounds.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3.5 rounded-2xl font-mono text-[9px] text-muted flex justify-between items-center">
+            <span>Region Scheduler:</span>
+            <span class="px-2 py-0.5 bg-green-100 text-google-green rounded font-bold uppercase">COMPATIBLE</span>
+          </div>
+        </div>
+
+        <!-- 4. Per-Player Schedulers -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-blue/10 flex items-center justify-center text-google-blue text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">4. Distributed Tick Load</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Ticking functions are allocated to each player's individual thread scheduler, avoiding heavy global online player loops.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-xs">
+            <span class="text-[10px] font-tech font-bold text-muted uppercase">Thread Distribution</span>
+            <span class="text-google-blue font-bold">Safe regional tick</span>
+          </div>
+        </div>
+
+        <!-- 5. Interactive Crafting -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-green/10 flex items-center justify-center text-google-green text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">5. Dynamic Recipe GUI</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Open `/gem menu` to inspect active cooldown states, view survival shaped recipes, and browse totem pops stats.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl font-mono text-[9px] text-muted flex justify-between items-center">
+            <span>Dynamic GUI state:</span>
+            <span class="px-2 py-0.5 bg-green-100 text-google-green rounded font-bold uppercase">ACTIVE</span>
+          </div>
+        </div>
+
+        <!-- 6. Claim Protections -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-red/10 flex items-center justify-center text-google-red text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">6. Claims & WorldGuard Friendly</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Gem damage simulates standard PvP damage events, automatically respecting claims, Towny settings, and spawn zones.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>WorldGuard Check:</span>
+            <span class="font-bold text-google-green uppercase">RESPECTED</span>
+          </div>
+        </div>
+
+        <!-- 7. Glitch-Free UI Locks -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-red/10 flex items-center justify-center text-google-red text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">7. Exploit-Free Security</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Custom InventoryHolder listeners block inventory item extraction, replication, or client-desync duplications.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>Inventory Guard:</span>
+            <span class="font-bold text-google-green uppercase">SECURE</span>
+          </div>
+        </div>
+
+        <!-- 8. Orbit packets tuning -->
+        <div class="glass-panel rounded-3xl p-8 border border-black/5 flex flex-col justify-between group hover:shadow-lift transition-all duration-300 transform hover:-translate-y-1">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-google-green/10 flex items-center justify-center text-google-green text-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h4 class="font-bold text-lg mb-3">8. Packet-Level displays</h4>
+            <p class="text-xs text-muted leading-relaxed font-light mb-6">Orbiting blocks utilize lightweight packet displays instead of laggy entities, guaranteeing zero CPU tick delays.</p>
+          </div>
+          <!-- Feature Mockup -->
+          <div class="bg-cloud/60 border border-black/5 p-3 rounded-2xl flex justify-between items-center text-[10px] font-mono text-muted">
+            <span>Orbit packet cycles:</span>
+            <span class="font-bold text-google-green">0ms DELAY</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM SCREENSHOTS GALLERY / SLIDER -->
+    <section class="mt-32 border-t border-black/5 pt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold text-google-blue uppercase tracking-widest block font-tech">// SYSTEMS GALLERY</span>
+        <h2 class="text-3xl lg:text-4xl font-black mt-2">Visual Showcase Gallery</h2>
+        <p class="text-muted text-sm max-w-2xl mx-auto mt-4 font-light">Browse professional, high-fidelity AI-generated mockups and in-game interface simulation layouts.</p>
+      </div>
+
+      <!-- Slideshow Slider Container -->
+      <div class="relative max-w-4xl mx-auto overflow-hidden rounded-[2rem] border border-black/5 shadow-lift bg-cloud group">
+        <div class="slides-container flex transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" style="transform: translateX(0%);">
+          
+          <!-- Slide 1: Main Altar -->
+          <div class="w-full shrink-0 aspect-[16/9] relative">
+            <img src="./lifesteal_heart_altar.png" alt="Minecraft Custom Gems Altar" class="w-full h-full object-cover">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-8 text-white flex flex-col justify-end">
+              <span class="text-xs font-tech tracking-wider text-google-red uppercase mb-1">CINEMATIC PREVIEW</span>
+              <h3 class="text-lg font-bold">Glowing Gems & Custom Altar</h3>
+              <p class="text-xs text-zinc-300 mt-1 font-light">Late-game crafting templates require rare items to activate modular elemental gems.</p>
+            </div>
+          </div>
+          
+          <!-- Slide 2: In-game Spells visual -->
+          <div class="w-full shrink-0 aspect-[16/9] relative bg-zinc-900 flex items-center justify-center p-8 text-white">
+            <div class="text-center max-w-md">
+              <div class="w-16 h-16 rounded-full bg-purple-500/20 border border-purple-400 flex items-center justify-center text-purple-400 text-3xl mx-auto mb-4 animate-pulse">
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <h3 class="text-xl font-black">12 Modular Spells</h3>
+              <p class="text-xs text-zinc-400 mt-2 leading-relaxed">Cast Gravity Crush telekinetic projectiles, chain sky-cracking lightning strikes, and execute Void Teleport Slash 3-step rapid blinks instantly.</p>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-8 text-white flex flex-col justify-end">
+              <span class="text-xs font-tech tracking-wider text-google-blue uppercase mb-1">SPELLS PREVIEW</span>
+              <h3 class="text-lg font-bold">12 Mythic Active Spells</h3>
+              <p class="text-xs text-zinc-300 mt-1 font-light">Direct combat adjustments without level grinding limits.</p>
+            </div>
+          </div>
+          
+          <!-- Slide 3: Mock double chest GUI -->
+          <div class="w-full shrink-0 aspect-[16/9] bg-zinc-900 flex items-center justify-center p-8 relative">
+            <!-- Simulated In-game Screen -->
+            <div class="w-full max-w-[400px] transform scale-90 sm:scale-100">
+              <div class="minecraft-gui w-full">
+                <div class="mc-header border-b-2 border-[#555555]">
+                  <i class="fa-solid fa-gem mr-1.5 text-xs text-[#373737]"></i>Mock Custom Gems Menu
+                </div>
+                <div class="mc-grid">
+                  <div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+                  <div class="mc-slot empty"></div>
+                  <div class="mc-slot"><i class="fa-solid fa-gem text-purple-400 text-xs"></i></div>
+                  <div class="mc-slot empty"></div>
+                  <div class="mc-slot"><i class="fa-solid fa-gem text-amber-500 text-xs"></i></div>
+                  <div class="mc-slot empty"></div>
+                  <div class="mc-slot"><i class="fa-solid fa-gem text-cyan-400 text-xs"></i></div>
+                  <div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-8 text-white flex flex-col justify-end">
+              <span class="text-xs font-tech tracking-wider text-google-yellow uppercase mb-1">IN-GAME SIMULATION</span>
+              <h3 class="text-lg font-bold">Dynamic active Board GUI menus</h3>
+              <p class="text-xs text-zinc-300 mt-1 font-light">Custom interfaces dynamically responsive to user inputs, completely asset-free.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Navigation Arrows -->
+        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 border border-black/5 flex items-center justify-center text-ink shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110">
+          <i class="fa-solid fa-chevron-left text-xs"></i>
+        </button>
+        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 border border-black/5 flex items-center justify-center text-ink shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110">
+          <i class="fa-solid fa-chevron-right text-xs"></i>
+        </button>
+
+        <!-- Slider Dots -->
+        <div class="absolute right-8 top-8 flex gap-2">
+          <button onclick="goToSlide(0)" class="slide-dot w-2 h-2 rounded-full bg-white/40 active-dot"></button>
+          <button onclick="goToSlide(1)" class="slide-dot w-2 h-2 rounded-full bg-white/40"></button>
+          <button onclick="goToSlide(2)" class="slide-dot w-2 h-2 rounded-full bg-white/40"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE LIVE PREVIEW AREA -->
+    <section id="sandbox" class="mt-32 border-t border-black/5 pt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold text-google-blue uppercase tracking-widest block font-tech">// EXPERIMENTAL LIVE SANDBOX</span>
+        <h2 class="text-3xl lg:text-4xl font-black mt-2">Interactive Plugin Preview</h2>
+      </div>
+
+      <div class="grid gap-12 lg:grid-cols-12 items-start">
+        <!-- Interactive Chest GUI (Left) -->
+        <div class="lg:col-span-5 flex flex-col items-center w-full">
+          <span class="font-tech text-[10px] text-muted uppercase tracking-widest mb-3 block">Minecraft Chest GUI Simulator</span>
+          
+          <!-- Mock Minecraft Chest GUI Wrapper for Mobile Scaling -->
+          <div class="w-full overflow-x-auto flex justify-center py-2">
+            <div class="minecraft-gui w-full max-w-[340px] shrink-0">
+            <div class="mc-header border-b-2 border-[#555555]">
+              <i class="fa-solid fa-shield mr-1.5 text-xs text-[#373737]"></i>Active Gem Menu
+            </div>
+            
+            <div class="mc-grid">
+              <div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+              
+              <div class="mc-slot empty"></div>
+              <!-- Slot 11: Gravity Gem, Slot 12 Empty, Slot 13: Shadow Gem, Slot 14 Empty, Slot 15: Void Gem -->
+              <div class="mc-slot">
+                <i class="fa-solid fa-gem text-purple-400 text-xs"></i>
+                <div class="mc-tooltip">
+                  <h4 class="text-purple-400">d✦ Gravity Gem</h4>
+                  <p class="text-zinc-400">Class: Telekinetic Gem</p>
+                  <p class="text-[#fbbc04] mt-1 font-mono">Ability: Gravity Crush</p>
+                </div>
+              </div>
+              <div class="mc-slot empty"></div>
+              <div class="mc-slot">
+                <i class="fa-solid fa-gem text-zinc-400 text-xs"></i>
+                <div class="mc-tooltip">
+                  <h4 class="text-zinc-200">d✦ Shadow Gem</h4>
+                  <p class="text-zinc-400">Class: Smog Illusion Gem</p>
+                  <p class="text-[#fbbc04] mt-1 font-mono">Ability: Shadow Clone Slash</p>
+                </div>
+              </div>
+              <div class="mc-slot empty"></div>
+              <div class="mc-slot">
+                <i class="fa-solid fa-gem text-blue-500 text-xs"></i>
+                <div class="mc-tooltip">
+                  <h4 class="text-cyan-400">d✦ Void Gem</h4>
+                  <p class="text-zinc-400">Class: Spatial Void Gem</p>
+                  <p class="text-[#fbbc04] mt-1 font-mono">Ability: Void Teleport Slash</p>
+                </div>
+              </div>
+              <div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+              
+              <div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div><div class="mc-slot empty"></div>
+            </div>
+          </div>
+        </div>
+
+          <p class="mt-4 text-[10px] text-zinc-500 font-tech uppercase tracking-widest">[HOVER ITEMS IN CHEST TO DEPLOY DETAILS]</p>
+        </div>
+
+        <!-- Dynamic Config Panel (Right) -->
+        <div class="lg:col-span-7 w-full">
+          <span class="font-tech text-[10px] text-muted uppercase tracking-widest mb-3 block text-left">Configuration File Inspector</span>
+          
+          <div class="config-panel">
+            <div class="config-tabs">
+              <div id="tab-config" class="config-tab active" onclick="switchConfigTab('config')">config.yml</div>
+              <div id="tab-database" class="config-tab" onclick="switchConfigTab('database')">recipes.yml</div>
+              <div id="tab-permissions" class="config-tab" onclick="switchConfigTab('permissions')">permissions.yml</div>
+            </div>
+            
+            <div class="p-6 text-left">
+              <pre class="overflow-x-auto text-[11px] font-mono leading-relaxed text-[#dfe7f4] min-h-[190px] max-h-[220px]" id="config-code">gem-settings:
+  gravity:
+    enabled: true
+    material: AMETHYST_SHARD
+    name: "&d✦ Gravity Gem"
+    rarity: Legendary
+    type: "Telekinetic Gem"
+    orbit-blocks: 5
+    orbit-radius: 1.8
+    flight-duration-seconds: 8
+    flight-cooldown-seconds: 30</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCUMENTATION SECTION -->
+    <section id="docs" class="mt-32 border-t border-black/5 pt-24 max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <!-- Commands & Permissions -->
+        <div>
+          <span class="text-xs font-semibold text-google-blue uppercase tracking-widest block font-tech">// OPERATIONS GUIDE</span>
+          <h2 class="text-3xl font-black mt-2 leading-tight">Commands & Permissions</h2>
+          
+          <div class="mt-8 overflow-x-auto border border-black/5 rounded-2xl">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Command</th>
+                  <th>Permission</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>/gem menu</td>
+                  <td>gem.use</td>
+                  <td>Open main interactive GUI panel.</td>
+                </tr>
+                <tr>
+                  <td>/gem info</td>
+                  <td>gem.use</td>
+                  <td>View active equipped gem stats.</td>
+                </tr>
+                <tr>
+                  <td>/gem recipe &lt;gem&gt;</td>
+                  <td>gem.use</td>
+                  <td>Directly open shaped crafting viewer.</td>
+                </tr>
+                <tr>
+                  <td>/gem give &lt;player&gt; &lt;gem&gt;</td>
+                  <td>gem.give</td>
+                  <td>Grant the player a custom gem block.</td>
+                </tr>
+                <tr>
+                  <td>/gem reload</td>
+                  <td>gem.reload</td>
+                  <td>Safely reload configurations logs.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Installation & Support -->
+        <div class="flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-semibold text-google-green uppercase tracking-widest block font-tech">// INTEGRATION BLUEPRINTS</span>
+            <h2 class="text-3xl font-black mt-2 leading-tight">Installation Blueprint</h2>
+            
+            <div class="mt-8 space-y-4 text-xs font-tech text-muted leading-relaxed font-light">
+              <div class="flex items-start space-x-3 p-3 border border-black/5 bg-cloud/50 rounded-xl">
+                <span class="font-bold text-google-blue">01</span>
+                <p>Download the latest <code class="bg-black/5 px-1 py-0.5 rounded text-ink font-mono font-medium">RaptorGemPlugin.jar</code> from the releases.</p>
+              </div>
+              <div class="flex items-start space-x-3 p-3 border border-black/5 bg-cloud/50 rounded-xl">
+                <span class="font-bold text-google-green">02</span>
+                <p>Drop the jar into the Paper/Spigot server <code class="bg-black/5 px-1 py-0.5 rounded text-ink font-mono font-medium">/plugins/</code> directory.</p>
+              </div>
+              <div class="flex items-start space-x-3 p-3 border border-black/5 bg-cloud/50 rounded-xl">
+                <span class="font-bold text-google-yellow">03</span>
+                <p>Restart Folia/Paper server to warm regional scheduling tick pipes and register configs.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 p-6 bg-cloud/60 border border-black/5 rounded-[2rem] text-left">
+            <h4 class="font-bold text-sm mb-2">Systems Integration Support</h4>
+            <p class="text-xs text-muted leading-relaxed font-light">
+              Raptor provides complete direct technical support for Folia grids, BharatMC networks, and large PvP networks. Connect via Discord for custom deployments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-black/5 py-12 bg-cloud/30">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-muted gap-4">
+      <span>© 2026 RAPTOR. ALL ARCHITECTURE RIGHTS RESERVED.</span>
+      <div class="flex items-center space-x-4">
+        <a href="index.html" class="hover:text-ink">Portfolio Home</a>
+        <a href="index.html#contact" class="hover:text-ink">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const configData = {
+      config: `gem-settings:
+  gravity:
+    enabled: true
+    material: AMETHYST_SHARD
+    name: "&d✦ Gravity Gem"
+    rarity: Legendary
+    type: "Telekinetic Gem"
+    orbit-blocks: 5
+    orbit-radius: 1.8
+    flight-duration-seconds: 8
+    flight-cooldown-seconds: 30`,
+      database: `gem-recipes:
+  gravity:
+    shape:
+      - "S P S"
+      - "P N P"
+      - "S P S"
+    ingredients:
+      S: SHULKER_SHELL
+      P: PHANTOM_MEMBRANE
+      N: NETHER_STAR`,
+      permissions: `permissions:
+  gem.use:
+    default: true
+    description: "Allows equipping and casting modular gem spells"
+  gem.give:
+    default: op
+    description: "Full master administrative gem giving capabilities"
+  gem.reload:
+    default: op
+    description: "Allows reloading configurations"`
+    };
+
+    function switchConfigTab(tab) {
+      document.querySelectorAll('.config-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById(`tab-${tab}`).classList.add('active');
+      document.getElementById('config-code').textContent = configData[tab];
+    }
+
+    // Slideshow Gallery Logic
+    let currentSlide = 0;
+    const totalSlides = 3;
+
+    function updateSlides() {
+      const container = document.querySelector('.slides-container');
+      if (container) {
+        container.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+      
+      // Update dots
+      document.querySelectorAll('.slide-dot').forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add('bg-white', 'scale-115');
+          dot.classList.remove('bg-white/40');
+        } else {
+          dot.classList.remove('bg-white', 'scale-115');
+          dot.classList.add('bg-white/40');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlides();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlides();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlides();
+    }
+
+    // Initialize dots on load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateSlides();
+    });
+  </script>
+</body>
+</html>
